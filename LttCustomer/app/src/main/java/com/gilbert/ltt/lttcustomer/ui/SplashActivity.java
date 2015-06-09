@@ -1,17 +1,19 @@
 package com.gilbert.ltt.lttcustomer.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.gilbert.ltt.lttcustomer.R;
+import com.google.inject.Inject;
 
 import roboguice.activity.RoboSplashActivity;
 
 /**
  * Created by xxstop on 15/6/09
  */
-// @ContentView(R.layout.activity_splash)
 public class SplashActivity extends RoboSplashActivity {
+    @Inject WindowManager windowManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,10 +25,7 @@ public class SplashActivity extends RoboSplashActivity {
 
     @Override
     protected void startNextActivity() {
-        // startActivity(new Intent());
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
     }
 
-    /*@Override
-    protected void andFinishThisOne() {
-    }*/
 }
