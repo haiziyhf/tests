@@ -43,9 +43,6 @@
 ```java
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.android.support:support-v4:22.1.1'
-    compile 'com.beardedhen:androidbootstrap:1.2.1'
-    compile 'info.hoang8f:android-segmented:1.0.5'
-    compile 'net.glxn.qrgen:android:2.0'
     compile project(':diana')
     provided 'org.roboguice:roboblender:3.0.1'
 ```
@@ -58,9 +55,6 @@
 ```java
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.android.support:support-v4:22.1.1'
-    compile 'com.beardedhen:androidbootstrap:1.2.1'
-    compile 'info.hoang8f:android-segmented:1.0.5'
-    compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:1.0.0'
     compile project(':diana')
     provided 'org.roboguice:roboblender:3.0.1'
 ```
