@@ -3,5 +3,5 @@
 
     <string name="app_name">两条腿</string>
     <string name="title_activity_main">首页</string>
-    <string name="title_activity_home">用户中心</string>
+    <string name="title_activity_user_home">用户中心</string>
 </resources>
