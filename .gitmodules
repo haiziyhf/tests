@@ -1,6 +1,6 @@
 [submodule "LttCustomer/diana"]
 	path = LttCustomer/diana
-	url = ssh://git@192.168.1.11:10022/xxstop/diana.git
+	url = git@github.com:fpcdm/diana.git
 [submodule "LttMerchant/diana"]
 	path = LttMerchant/diana
-	url = ssh://git@192.168.1.11:10022/xxstop/diana.git
+	url = git@github.com:fpcdm/diana.git

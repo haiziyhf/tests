@@ -2,7 +2,7 @@
 =======================
 
 ## Diana 框架
-> gitlab: ssh://git@192.168.1.11:10022/xxstop/diana.git
+> github: git@github.com:fpcdm/diana.git
 
 ###使用组件
 
@@ -36,7 +36,7 @@
 * ui 视图类
 
 ## LttCustomer 客户端
-> gitlab: ssh://git@192.168.1.11:10022/xxstop/zac.git
+> github: git@github.com:fpcdm/zac.git
 
 ### 使用组件
 
@@ -48,7 +48,7 @@
 ```
 
 ## LttMerchant: 两条腿商户端
-> gitlab: ssh://git@192.168.1.11:10022/xxstop/zac.git
+> github: git@github.com:fpcdm/zac.git
 
 ### 使用组件
 
