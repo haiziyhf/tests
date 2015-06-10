@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.gilbert.ltt.lttcustomer" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,8 +32,7 @@
         </activity>
         <activity
             android:name=".ui.user.HomeActivity"
-            android:label="@string/title_activity_user_home"
-            android:theme="@style/Theme.Ltt.Customer.User" >
+            android:label="@string/title_activity_user_home" >
         </activity>
     </application>
 
