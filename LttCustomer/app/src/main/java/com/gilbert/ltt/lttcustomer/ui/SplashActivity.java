@@ -1,6 +1,5 @@
 package com.gilbert.ltt.lttcustomer.ui;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -24,8 +23,12 @@ public class SplashActivity extends RoboSplashActivity {
     }
 
     @Override
+    protected void andFinishThisOne() {
+    }
+
+    @Override
     protected void startNextActivity() {
-        startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        // startActivity(new Intent(SplashActivity.this, MainActivity.class));
     }
 
 }
