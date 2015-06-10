@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import com.gilbert.ltt.diana.local.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
+import com.gilbert.ltt.lttcustomer.ui.user.HomeActivity;
 
 import roboguice.inject.ContentView;
 
@@ -14,7 +15,7 @@ public class MainActivity extends LttAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startActivity(new Intent());
+        startActivity(new Intent(MainActivity.this, HomeActivity.class));
     }
 
 }
