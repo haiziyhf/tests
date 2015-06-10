@@ -4,6 +4,8 @@
     <color name="primary_dark">#F37731</color>
     <color name="accent">#F37731</color>
     <color name="background">#EEEEEE</color>
+    <color name="block_background">#FFFFFF</color>
     <color name="color_line">#D8D8D8</color>
     <color name="text">#000000</color>
+    <color name="button_text">#FFFFFF</color>
 </resources>
