@@ -7,14 +7,17 @@ import com.gilbert.ltt.diana.local.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
 import com.gilbert.ltt.lttcustomer.ui.user.HomeActivity;
 
-import roboguice.inject.ContentView;
-
-@ContentView(R.layout.activity_main)
 public class MainActivity extends LttAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        jumpUserHome();
+    }
+
+    private void jumpUserHome() {
         startActivity(new Intent(MainActivity.this, HomeActivity.class));
     }
 

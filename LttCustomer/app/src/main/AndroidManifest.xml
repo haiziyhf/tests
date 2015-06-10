@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme"
+        android:theme="@style/Theme.Ltt.Customer"
         android:name="com.gilbert.ltt.diana.local.LttApplication" >
         <activity
             android:name=".ui.SplashActivity"
@@ -21,8 +21,10 @@
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
-        <activity android:name=".ui.user.HomeActivity"
-            android:label="@string/title_activity_user_home" >
+        <activity
+            android:name=".ui.user.HomeActivity"
+            android:label="@string/title_activity_user_home"
+            android:theme="@style/Theme.Ltt.Customer.User" >
         </activity>
     </application>
 
