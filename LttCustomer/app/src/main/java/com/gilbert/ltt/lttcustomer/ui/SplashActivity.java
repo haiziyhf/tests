@@ -1,5 +1,7 @@
 package com.gilbert.ltt.lttcustomer.ui;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
 
@@ -12,7 +14,7 @@ import roboguice.activity.RoboSplashActivity;
  * Created by xxstop on 15/6/09
  */
 public class SplashActivity extends RoboSplashActivity {
-    @Inject WindowManager windowManager;
+    @Inject Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +25,8 @@ public class SplashActivity extends RoboSplashActivity {
     }
 
     @Override
-    protected void andFinishThisOne() {
-    }
-
-    @Override
     protected void startNextActivity() {
-        // startActivity(new Intent(SplashActivity.this, MainActivity.class));
+        startActivity(new Intent(SplashActivity.this, MainActivity.class));
     }
 
 }
