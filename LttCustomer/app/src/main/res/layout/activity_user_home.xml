@@ -26,15 +26,41 @@
     </LinearLayout>
 
     <LinearLayout
+        android:background="@color/block_background"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/lv_personal_opera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@color/block_background"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ListView
+            android:id="@+id/lv_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:padding="10dp">
         <Button
             android:id="@+id/b_exit"
-            android:background="@color/primary"
+            android:background="@color/button_background"
             android:textColor="@color/button_text"
             android:text="@string/exit_button"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="30dp" />
     </LinearLayout>
 </LinearLayout>

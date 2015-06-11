@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#F37731</color>
-    <color name="primary_dark">#F37731</color>
-    <color name="accent">#F37731</color>
+    <color name="primary">#FF4400</color>
+    <color name="primary_dark">#FF4400</color>
+    <color name="accent">#FF4400</color>
     <color name="background">#EEEEEE</color>
     <color name="block_background">#FFFFFF</color>
     <color name="line">#D8D8D8</color>
     <color name="text">#000000</color>
     <color name="button_text">#FFFFFF</color>
+    <color name="button_background">#FF0000</color>
 </resources>
