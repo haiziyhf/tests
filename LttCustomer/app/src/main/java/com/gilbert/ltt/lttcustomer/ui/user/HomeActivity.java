@@ -62,7 +62,7 @@ public class HomeActivity extends LttAppCompatActivity {
     private void initContactList() {
         alContact.add(new HashMap<String, String>() {
             {
-                put("title", "意见所反馈");
+                put("title", "意见反馈");
             }
         });
         alContact.add(new HashMap<String, String>() {
