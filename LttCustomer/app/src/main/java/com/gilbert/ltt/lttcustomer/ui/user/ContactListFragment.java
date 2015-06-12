@@ -11,6 +11,8 @@ import com.gilbert.ltt.lttcustomer.R;
 import com.gilbert.ltt.lttcustomer.ui.MainActivity;
 import com.google.inject.Inject;
 
+import org.apache.commons.lang.ObjectUtils;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -29,7 +31,7 @@ public class ContactListFragment extends RoboListFragment {
         super.onCreate(savedInstanceState);
         String[] texts = new String[] {"意见反馈", "客户电话"};
         String[] marks = new String[] {"", "400-820-5555"};
-        Object[] actions = new Object[] {MainActivity.class, "tel:400-800-5555"};
+        Object[] actions = new Object[] {null, "tel:400-800-5555"};
         for (int i=0; i<texts.length; i++) {
             Map<String, Object> map = new HashMap<>();
             map.put("title", texts[i]);
