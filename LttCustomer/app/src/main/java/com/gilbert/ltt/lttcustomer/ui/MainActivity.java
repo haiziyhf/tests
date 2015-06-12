@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.gilbert.ltt.diana.local.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
-import com.gilbert.ltt.lttcustomer.ui.user.HomeActivity;
+import com.gilbert.ltt.lttcustomer.ui.user.PersonalActivity;
 
 public class MainActivity extends LttAppCompatActivity {
 
@@ -18,7 +18,7 @@ public class MainActivity extends LttAppCompatActivity {
     }
 
     private void jumpUserHome() {
-        startActivity(new Intent(MainActivity.this, HomeActivity.class));
+        startActivity(new Intent(MainActivity.this, PersonalActivity.class));
     }
 
 }

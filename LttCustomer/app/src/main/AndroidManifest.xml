@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <supports-screens
         android:largeScreens="true"
@@ -12,11 +13,11 @@
         android:xlargeScreens="true" />
 
     <application
+        android:name="com.gilbert.ltt.diana.local.LttApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Ltt.Customer"
-        android:name="com.gilbert.ltt.diana.local.LttApplication" >
+        android:theme="@style/Theme.Ltt.Customer" >
         <activity
             android:name=".ui.SplashActivity"
             android:label="@string/app_name" >
@@ -31,7 +32,7 @@
             android:label="@string/title_activity_main" >
         </activity>
         <activity
-            android:name=".ui.user.HomeActivity"
+            android:name=".ui.user.PersonalActivity"
             android:label="@string/title_activity_user_home" >
         </activity>
     </application>

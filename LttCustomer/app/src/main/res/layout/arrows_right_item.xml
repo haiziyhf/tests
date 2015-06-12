@@ -3,7 +3,7 @@
     android:orientation="horizontal" android:layout_width="fill_parent"
     android:layout_height="match_parent">
     <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/title"
+        android:id="@+id/tv_title"
         android:textColor="@color/text"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
@@ -11,10 +11,20 @@
         android:layout_weight="1"
         android:layout_width="0dip"
         android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tv_remarks"
+        android:textColor="@color/remark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:id="@+id/tv_marked"
+        android:textColor="@color/primary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
     <ImageView
+        android:id="@+id/iv_forward"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:id="@+id/iv_forward"
         android:src="@drawable/arrows_forward"
         android:layout_width="32dp"
         android:layout_height="fill_parent" />
