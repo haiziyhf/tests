@@ -6,20 +6,20 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.gilbert.ltt.diana.local.ui.ItemListFragment;
 import com.gilbert.ltt.lttcustomer.R;
 import com.google.inject.Inject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Map;
 
 import roboguice.fragment.RoboListFragment;
 
 /**
  * A placeholder fragment containing a simple view.
  */
-public class PersonalOperaListFragment extends RoboListFragment {
-    @Inject ArrayList<HashMap<String, Object>> list;
-    SimpleAdapter adapter;
+public class PersonalOperaListFragment extends ItemListFragment<Map<String, Object>> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

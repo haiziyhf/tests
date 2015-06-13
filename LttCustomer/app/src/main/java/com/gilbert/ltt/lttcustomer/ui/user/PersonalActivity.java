@@ -2,7 +2,7 @@ package com.gilbert.ltt.lttcustomer.ui.user;
 
 import android.os.Bundle;
 
-import com.gilbert.ltt.diana.local.LttAppCompatActivity;
+import com.gilbert.ltt.diana.local.ui.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
 
 /**

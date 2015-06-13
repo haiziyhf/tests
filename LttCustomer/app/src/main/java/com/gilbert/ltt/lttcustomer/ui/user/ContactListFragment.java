@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.gilbert.ltt.diana.local.ui.ItemListFragment;
 import com.gilbert.ltt.lttcustomer.R;
 import com.gilbert.ltt.lttcustomer.ui.MainActivity;
 import com.google.inject.Inject;
@@ -22,9 +23,7 @@ import roboguice.fragment.RoboListFragment;
 /**
  * Created by xxstop on 15/6/12.
  */
-public class ContactListFragment extends RoboListFragment {
-    @Inject ArrayList<Map<String, Object>> list;
-    SimpleAdapter adapter;
+public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
