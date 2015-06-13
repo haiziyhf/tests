@@ -9,16 +9,10 @@ import android.widget.SimpleAdapter;
 
 import com.gilbert.ltt.diana.local.ui.ItemListFragment;
 import com.gilbert.ltt.lttcustomer.R;
-import com.gilbert.ltt.lttcustomer.ui.MainActivity;
-import com.google.inject.Inject;
-
-import org.apache.commons.lang.ObjectUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-
-import roboguice.fragment.RoboListFragment;
 
 /**
  * Created by xxstop on 15/6/12.
@@ -28,6 +22,7 @@ public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        items = new ArrayList<>();
         String[] texts = new String[] {"意见反馈", "客户电话"};
         String[] marks = new String[] {"", "400-820-5555"};
         Object[] actions = new Object[] {null, "tel:400-800-5555"};
@@ -36,9 +31,9 @@ public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
             map.put("title", texts[i]);
             map.put("marked", marks[i]);
             map.put("action", actions[i]);
-            list.add(map);
+            items.add(map);
         }
-        adapter = new SimpleAdapter(getActivity(), list,
+        adapter = new SimpleAdapter(getActivity(), items,
                 R.layout.arrows_right_item, new String[]{"title","marked"},
                 new int[]{R.id.tv_title,R.id.tv_marked});
         setListAdapter(adapter);
@@ -47,7 +42,7 @@ public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Object action = list.get(position).get("action");
+        Object action = items.get(position).get("action");
         if (null == action) {
             return ;
         }

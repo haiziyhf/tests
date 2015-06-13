@@ -28,12 +28,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.FaceFrameActivity"
             android:label="@string/title_activity_main" >
-        </activity>
-        <activity
-            android:name=".ui.user.PersonalActivity"
-            android:label="@string/title_activity_user_home" >
         </activity>
     </application>
 
