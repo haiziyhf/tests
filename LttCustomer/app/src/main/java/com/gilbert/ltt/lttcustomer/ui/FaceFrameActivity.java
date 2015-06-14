@@ -4,6 +4,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.TextView;
 
 import com.gilbert.ltt.diana.local.ui.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
@@ -24,7 +27,16 @@ public class FaceFrameActivity extends LttAppCompatActivity {
     }
 
     private void initActionBar() {
-        setSupportActionBar((android.support.v7.widget.Toolbar) findViewById(R.id.toolbar));
+        View v = findViewById(R.id.toolbar);
+        if (v != null) {
+            Toolbar toolbar = (Toolbar) v;
+            setSupportActionBar(toolbar);
+            TextView toolbarTitle = (TextView) v.findViewById(R.id.toolbar_title);
+            if (toolbarTitle != null) {
+                toolbarTitle.setText(getTitle());
+                getSupportActionBar().setDisplayShowTitleEnabled(false);
+            }
+        }
     }
 
     private void initFrame() {
