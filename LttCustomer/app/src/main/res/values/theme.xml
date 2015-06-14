@@ -16,9 +16,12 @@
         <item name="android:cacheColorHint">@android:color/transparent</item>
     </style>
 
-    <style name="ToolbarStyle">
-        <item name="colorControlNormal">@color/primary</item>
-        <item name="colorControlHighlight">@color/background</item>
+    <!-- ToolBar -->
+    <style name="ToolBarStyle">
+        <item name="android:textColorPrimary">@color/menu_text</item>
+        <item name="android:textColorSecondary">@color/menu_text</item>
+        <item name="actionMenuTextColor">@color/menu_text</item>
+        <item name="background">@color/primary</item>
     </style>
 
     <style name="Widget.Styled.ListView" parent="Widget.AppCompat.ListView">
