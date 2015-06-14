@@ -13,9 +13,12 @@ import com.gilbert.ltt.lttcustomer.R;
 import com.gilbert.ltt.lttcustomer.ui.user.PersonalFragment;
 import com.google.inject.Inject;
 
+import roboguice.inject.InjectView;
+
 public class FaceFrameActivity extends LttAppCompatActivity {
     @Inject FragmentManager fragmentManager;
     @Inject PersonalFragment personalFragment;
+    @InjectView(R.id.toolbar) Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +30,11 @@ public class FaceFrameActivity extends LttAppCompatActivity {
     }
 
     private void initActionBar() {
-        View v = findViewById(R.id.toolbar);
-        if (v != null) {
-            Toolbar toolbar = (Toolbar) v;
-            setSupportActionBar(toolbar);
-            TextView toolbarTitle = (TextView) v.findViewById(R.id.toolbar_title);
-            if (toolbarTitle != null) {
-                toolbarTitle.setText(getTitle());
-                getSupportActionBar().setDisplayShowTitleEnabled(false);
-            }
+        setSupportActionBar(toolbar);
+        TextView toolbarTitle = (TextView) toolbar.findViewById(R.id.toolbar_title);
+        if (toolbarTitle != null && getSupportActionBar() != null) {
+            toolbarTitle.setText(getTitle());
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
         }
     }
 
