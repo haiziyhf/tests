@@ -25,6 +25,7 @@
         android:id="@+id/iv_forward"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
+        android:paddingRight="15dp"
         android:src="@drawable/arrows_forward"
         android:layout_width="32dp"
         android:layout_height="fill_parent" />

@@ -1,4 +1,4 @@
-package com.gilbert.ltt.lttcustomer.ui.user;
+package com.gilbert.ltt.lttcustomer.ui.system;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,23 +14,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by xxstop on 15/6/12.
+ * Created by xxstop on 15/6/15.
  */
-public class PersonalOperaListFragment extends ItemListFragment<Map<String, Object>> {
+public class AboutListFragment extends ItemListFragment<Map<String, Object>> {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         items = new ArrayList<>();
-        String[] texts = new String[] {"位置", "个人资料", "账户与安全"};
-        Object[] actions = new Object[] {null, null, null};
-        for (int i=0; i<texts.length; i++) {
-            HashMap<String, Object> map = new HashMap<>();
-            map.put("title", texts[i]);
-            map.put("marked", "");
-            map.put("action", actions[i]);
-            items.add(map);
-        }
+        items.add(new HashMap<String, Object>() {
+            {
+                put("title", "关于手机两条腿");
+                put("marked", "");
+                put("action", null);
+            }
+        });
         adapter = new SimpleAdapter(getActivity(), items,
                 R.layout.arrows_right_item, new String[]{"title","marked"},
                 new int[]{R.id.tv_title,R.id.tv_marked});
@@ -44,7 +42,6 @@ public class PersonalOperaListFragment extends ItemListFragment<Map<String, Obje
         if (null == action) {
             return ;
         }
-
         Intent intent = new Intent(getActivity(), (Class<?>) action);
         startActivity(intent);
     }

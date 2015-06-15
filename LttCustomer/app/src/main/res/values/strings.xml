@@ -3,4 +3,5 @@
 
     <string name="app_name">两条腿</string>
     <string name="exit_button">退出当前账号</string>
+    <string name="clean_cache">清除本地缓存</string>
 </resources>
