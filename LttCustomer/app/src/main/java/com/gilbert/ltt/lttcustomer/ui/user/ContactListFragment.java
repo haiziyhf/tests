@@ -2,8 +2,8 @@ package com.gilbert.ltt.lttcustomer.ui.user;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Bundle;
 import android.view.View;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -12,6 +12,7 @@ import com.gilbert.ltt.lttcustomer.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -20,8 +21,15 @@ import java.util.Map;
 public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected ListAdapter createAdapter(List<Map<String, Object>> items) {
+        adapter = new SimpleAdapter(getActivity(), items,
+                R.layout.arrows_right_item, new String[]{"title","marked"},
+                new int[]{R.id.tv_title,R.id.tv_marked});
+        return adapter;
+    }
+
+    @Override
+    public List<Map<String, Object>> getItems() {
         items = new ArrayList<>();
         String[] texts = new String[] {"意见反馈", "客户电话"};
         String[] marks = new String[] {"", "400-820-5555"};
@@ -33,10 +41,7 @@ public class ContactListFragment extends ItemListFragment<Map<String, Object>> {
             map.put("action", actions[i]);
             items.add(map);
         }
-        adapter = new SimpleAdapter(getActivity(), items,
-                R.layout.arrows_right_item, new String[]{"title","marked"},
-                new int[]{R.id.tv_title,R.id.tv_marked});
-        setListAdapter(adapter);
+        return items;
     }
 
     @Override
