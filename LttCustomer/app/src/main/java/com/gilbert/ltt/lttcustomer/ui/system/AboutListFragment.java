@@ -47,6 +47,7 @@ public class AboutListFragment extends ItemListFragment<Map<String, Object>> {
         if (null == action) {
             return ;
         }
+        
         Intent intent = new Intent(getActivity(), (Class<?>) action);
         startActivity(intent);
     }
