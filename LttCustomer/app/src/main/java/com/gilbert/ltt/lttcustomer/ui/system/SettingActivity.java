@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.gilbert.ltt.diana.local.ui.LttAppCompatActivity;
 import com.gilbert.ltt.lttcustomer.R;
@@ -30,7 +31,7 @@ public class SettingActivity extends LttAppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-
+        Toast.makeText(this, "正在清除缓存中...", Toast.LENGTH_SHORT).show();
     }
 
     private void initBindEvent() {
